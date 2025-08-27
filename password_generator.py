@@ -11,6 +11,8 @@ print('''Choose character set for password from these :
          3. Special characters
          4. Exit''')
 
+# Main program loop
+# Save characters possibilites in a variable based on user characters choices
 while(True):
     choice = int(input("Pick a number : "))
     if choice == 1 :
@@ -28,6 +30,7 @@ if not characterList:
     print("No character set selected, password cannot be generated.")
     exit()
 
+# Create a password of the requested length by randomly choosing characters from the list of possible characters.
 password = "".join(random.choice(characterList) for _ in range(length))
 
 
